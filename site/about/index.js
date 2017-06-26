@@ -1,10 +1,10 @@
 let Service = function(req, res) {
     //DOM - Init
     res.locals = {
-        title: 'About Page'
+        title: 'Bem vindo ao Michael Lands'
     };
     
-    res.render('index');
+    res.render('about/index');
 };
 
 module.exports = Service;
