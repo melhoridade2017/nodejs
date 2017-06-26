@@ -1,0 +1,22 @@
+{
+  "name": "melhoridade",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Michael Douglas Barbosa Araujo <michaeldouglas010790@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/michaeldouglas/webrtc-expressjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
