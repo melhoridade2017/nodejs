@@ -26,8 +26,8 @@ let routes = require('./routes');
 routes.set(app);
 
 
-const port = 3000;
+const port = 80;
 
 app.listen(port, function(){
-    console.log('Estou funcionando na porta 3000');
+    console.log('Estou funcionando na porta 80');
 });

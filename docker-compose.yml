@@ -10,14 +10,14 @@ services:
             API_HOST: 'hostapi'
             API_PORT: 4000
         ports:
-            - 3000:3000
+            - 80:80
         depends_on:
-            - webrtcapi
+            - api-host
         volumes:
             - ./site:/home/site
             - /home/site/node_modules
     #API
-    webrtcapi:
+    api-host:
         container_name: api-host
         build: ./api
         links:
