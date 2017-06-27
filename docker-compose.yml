@@ -1,6 +1,7 @@
+#docker-compose.yml
 version: '2'
 services:
-    #WEBSITE
+    #WEB
     web:
         container_name: web-static
         build: ./site
@@ -11,30 +12,31 @@ services:
         ports:
             - 3000:3000
         depends_on:
-            - hostapi
+            - webrtcapi
         volumes:
             - ./site:/home/site
             - /home/site/node_modules
     #API
-    hostapi:
-        container_name: host-api
+    webrtcapi:
+        container_name: api-host
         build: ./api
         links:
             - db
         environment:
             PORT: 4000
+        ports:
+            - "4000:4000"
         volumes:
             - ./api:/home/api
             - /home/api/node_modules
-    #MYSQL
+    #MySQL
     db:
         image: mysql:5.7
         ports:
-            - "3310:3306"
+          - "3310:3306"
         container_name: developers-mysql
         environment:
           - MYSQL_ROOT_PASSWORD=melhoridade
           - MYSQL_DATABASE=melhoridade
           - MYSQL_USER=melhoridade
           - MYSQL_PASSWORD=melhoridade
-        
